@@ -1,6 +1,6 @@
 #include <pcl/io/pcd_io.h>
 
-#include "euclidean_cluster.h"
+#include "segment/euclidean_cluster.h"
 
 int main(int argc, char **argv)
 {

@@ -1,4 +1,4 @@
-#include "patchworkpp.h"
+#include "segment/patchworkpp.h"
 
 #include <numeric>
 using namespace patchwork;

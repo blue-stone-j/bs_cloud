@@ -1,7 +1,7 @@
 
 #include <thread>
 
-#include "line_fit_ground_segmentation.h"
+#include "segment/line_fit_ground_segmentation.h"
 
 /************* Bin *************/
 
