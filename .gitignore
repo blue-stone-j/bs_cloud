@@ -1,0 +1,8 @@
+.cache
+.vscode
+
+/install/*
+
+/.vscode
+
+*/cmake/*Config.cmake

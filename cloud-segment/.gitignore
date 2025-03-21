@@ -1,0 +1,10 @@
+/build
+.cache
+.vscode
+
+/install
+
+/lib
+/.vscode
+
+/cmake/cloud_segmentConfig.cmake

@@ -1,0 +1,9 @@
+/assets
+
+/build
+/devel
+/install
+
+.vscode
+
+/cmake/cloud_fitConfig.cmake
