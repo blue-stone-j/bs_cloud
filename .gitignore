@@ -1,8 +1,10 @@
 .cache
 .vscode
 
-/install/*
-
-/.vscode
+build
+devel
+install
 
 */cmake/*Config.cmake
+
+/common/global_definition.h

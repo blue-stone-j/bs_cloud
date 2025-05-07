@@ -6,7 +6,7 @@
 #include <pcl/features/normal_3d.h>
 #include <pcl/filters/extract_indices.h>
 
-#include "cylinder.h"
+#include "fit/cylinder/cylinder.h"
 
 TEST(Test, test1)
 {

@@ -3,7 +3,7 @@
 #include <pcl/io/pcd_io.h>
 #include <pcl/segmentation/sac_segmentation.h>
 
-#include "plane.h"
+#include "fit/plane/plane.h"
 
 TEST(Test, test1)
 {

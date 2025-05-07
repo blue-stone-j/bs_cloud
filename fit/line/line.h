@@ -1,9 +1,9 @@
 #ifndef LINE_FIT_H
 #define LINE_FIT_H
 
-#include "interface.h"
+#include "fit/common/interface.h"
 
-class LineFit : public Interface
+class LineFit : public FitInterface
 {
  public:
   int fit();
