@@ -3,9 +3,9 @@
 #include <pcl/point_cloud.h>
 #include <pcl/io/pcd_io.h>
 
-#include "segment/point_type.h"
+#include "segment/common/point_type.h"
 
-#include "segment/patchworkpp.h"
+#include "segment/patchworkpp/patchworkpp.h"
 
 
 int main(int argc, char **argv)

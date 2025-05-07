@@ -6,7 +6,7 @@
 
 #include <pcl/io/pcd_io.h>
 
-#include "segment/ray_ground_filter.h"
+#include "segment/ray_ground_filter/ray_ground_filter.h"
 
 int main(int argc, char **argv)
 {

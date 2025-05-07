@@ -1,4 +1,4 @@
-#include "segment/cylinder.h"
+#include "segment/cylinder/cylinder.h"
 
 CylinderFilter::CylinderFilter(CylinderParams params)
 {}

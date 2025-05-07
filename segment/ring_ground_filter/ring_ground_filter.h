@@ -7,7 +7,7 @@
 
 #include <eigen3/Eigen/Dense>
 
-#include "point_type.h"
+#include "segment/common/point_type.h"
 
 
 // every ring can be labeled by three labels

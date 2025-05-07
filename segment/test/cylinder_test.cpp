@@ -8,7 +8,7 @@
 #include <pcl/sample_consensus/model_types.h>
 #include <pcl/segmentation/sac_segmentation.h>
 
-#include "segment/cylinder.h"
+#include "segment/cylinder/cylinder.h"
 
 int main(int argc, char **argv)
 {

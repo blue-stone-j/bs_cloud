@@ -1,4 +1,4 @@
-#include "segment/euclidean_cluster.h"
+#include "segment/euclidean_cluster/euclidean_cluster.h"
 
 EuclideanCluster::EuclideanCluster( )
 {
