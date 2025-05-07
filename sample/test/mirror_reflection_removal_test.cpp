@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "sample_filter/mirror_reflection_removal.h"
+#include "sample/mirror_reflection_removal/mirror_reflection_removal.h"
 
 TEST(mirror_reflection_removal_test, Cloud)
 {

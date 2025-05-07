@@ -1,11 +1,11 @@
-#include "sample_filter/farthest_point_sample.h"
+#include "sample/farthest_point_sample/farthest_point_sample.h"
 
-namespace SampleFilter
+namespace Sample
 {
 FarthestPointFilter::FarthestPointFilter(FarthestPointFilterParams params) :
   params(params) {}
 
-int FarthestPointFilter::sample_filter()
+int FarthestPointFilter::sample()
 {
   std::vector<int> idxs(params.number_batch * params.number_select);
   std::vector<float> temp(params.number_batch * params.size_batch);
@@ -80,4 +80,4 @@ pcl::PointCloud<pcl::PointXYZ> GetFPS(pcl::PointCloud<pcl::PointXYZ> &input, con
   }
   return output;
 }
-} // namespace SampleFilter
+} // namespace Sample

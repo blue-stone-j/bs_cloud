@@ -1,9 +1,9 @@
 #ifndef KMEANS_SAMPLE_H
 #define KMEANS_SAMPLE_H
 
-#include "interface.h"
+#include "sample/common/interface.h"
 
-namespace SampleFilter
+namespace Sample
 {
 struct KMeansSampleParams
 {
@@ -13,6 +13,6 @@ struct KMeansSampleParams
 
 class KMeansSample : public Interface
 {};
-} // namespace SampleFilter
+} // namespace Sample
 
 #endif

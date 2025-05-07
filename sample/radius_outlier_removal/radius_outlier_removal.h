@@ -1,16 +1,15 @@
 #ifndef RADIUS_OUTLIER_REMOVAL_H
 #define RADIUS_OUTLIER_REMOVAL_H
 
+#include "sample/common/interface.h"
 
-#include "interface.h"
 
-
-namespace SampleFilter
+namespace Sample
 {
 class ROR : public Interface
 {
  public:
-  int sample_filter() override;
+  int sample() override;
   void setRadiusSearch(double ri);
   void setMinNeighborsInRadius(int num);
 
@@ -19,7 +18,7 @@ class ROR : public Interface
   int num_threshold = 5;
 };
 
-} // namespace SampleFilter
+} // namespace Sample
 
 
 #endif

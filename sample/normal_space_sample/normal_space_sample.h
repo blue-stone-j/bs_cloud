@@ -1,10 +1,9 @@
 #ifndef NORMAL_SPACE_SAMPLE_H
 #define NORMAL_SPACE_SAMPLE_H
 
+#include "sample/common/interface.h"
 
-#include "interface.h"
-
-namespace SampleFilter
+namespace Sample
 {
 struct NormalSpaceSampleParams
 {
@@ -14,6 +13,6 @@ struct NormalSpaceSampleParams
 
 class NormalSpaceSample : public Interface
 {};
-} // namespace SampleFilter
+} // namespace Sample
 
 #endif

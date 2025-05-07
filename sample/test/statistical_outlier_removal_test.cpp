@@ -1,12 +1,12 @@
 #include <gtest/gtest.h>
 #include <pcl/filters/statistical_outlier_removal.h>
 
-#include "sample_filter/statistical_outlier_removal.h"
+#include "sample/statistical_outlier_removal/statistical_outlier_removal.h"
 
 
 TEST(statistical_outlier_removal_test, Cloud1)
 {
-  SampleFilter::SOR sor;
+  Sample::SOR sor;
   sor.setCloudPath("../assets/cloud/fog.pcd");
 
   // pcl
@@ -20,7 +20,7 @@ TEST(statistical_outlier_removal_test, Cloud1)
   std::cout << "pcl: " << sor.cloud->size() << ", " << cloud_filtered.size() << std::endl;
 
   // customized
-  sor.sample_filter();
+  sor.sample();
   sor.saveCloud("../result/filtered_point_cloud1.pcd");
   std::cout << "nne: " << sor.cloud->size() << ", " << sor.cloud_filtered->size() << std::endl;
 }

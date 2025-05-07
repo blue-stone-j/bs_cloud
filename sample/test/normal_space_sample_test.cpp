@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "sample_filter/normal_space_sample.h"
+#include "sample/normal_space_sample/normal_space_sample.h"
 
 TEST(normal_space_sample_test, Cloud)
 {

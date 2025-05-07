@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "sample_filter/poisson_disk_sample.h"
+#include "sample/poisson_disk_sample/poisson_disk_sample.h"
 
 TEST(poisson_disk_sample_test, Cloud)
 {

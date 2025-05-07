@@ -8,14 +8,14 @@
 #include <pcl/io/pcd_io.h>
 #include <pcl/filters/extract_indices.h>
 
-namespace SampleFilter
+namespace Sample
 {
 class Interface
 {
  public:
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud;
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered;
-  virtual int sample_filter() = 0;
+  virtual int sample() = 0;
   Interface()
   {
     cloud.reset(new pcl::PointCloud<pcl::PointXYZ>());
@@ -38,6 +38,6 @@ class Interface
     return 0;
   }
 };
-} // namespace SampleFilter
+} // namespace Sample
 
 #endif

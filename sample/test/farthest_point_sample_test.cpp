@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "sample_filter/farthest_point_sample.h"
+#include "sample/farthest_point_sample/farthest_point_sample.h"
 
 
 TEST(farthest_point_sample_test, Cloud)

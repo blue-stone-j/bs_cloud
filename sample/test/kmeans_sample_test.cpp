@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "sample_filter/kmeans_sample.h"
+#include "sample/kmeans_sample/kmeans_sample.h"
 
 TEST(kmeans_sample_test, Cloud)
 {

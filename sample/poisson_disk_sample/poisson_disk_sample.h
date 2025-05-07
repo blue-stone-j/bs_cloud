@@ -1,9 +1,9 @@
 #ifndef POISSON_DISK_SAMPLE_H
 #define POISSON_DISK_SAMPLE_H
 
-#include "interface.h"
+#include "sample/common/interface.h"
 
-namespace SampleFilter
+namespace Sample
 {
 struct PoissonDiskSampleParams
 {
@@ -13,6 +13,6 @@ struct PoissonDiskSampleParams
 
 class PoissonDiskSample : public Interface
 {};
-} // namespace SampleFilter
+} // namespace Sample
 
 #endif

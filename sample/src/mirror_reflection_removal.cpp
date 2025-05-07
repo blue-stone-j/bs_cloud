@@ -1,1 +1,0 @@
-#include "sample_filter/mirror_reflection_removal.h"

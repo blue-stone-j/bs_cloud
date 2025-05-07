@@ -1,10 +1,9 @@
 #ifndef MIRROR_REFLECTION_REMOVAL_H
 #define MIRROR_REFLECTION_REMOVAL_H
 
+#include "sample/common/interface.h"
 
-#include "interface.h"
-
-namespace SampleFilter
+namespace Sample
 {
 struct MirrorReflectionRemovalParams
 {
@@ -14,7 +13,7 @@ struct MirrorReflectionRemovalParams
 
 class MirrorReflectionRemoval : public Interface
 {};
-} // namespace SampleFilter
+} // namespace Sample
 
 
 #endif

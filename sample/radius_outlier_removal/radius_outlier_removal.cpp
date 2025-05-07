@@ -1,9 +1,11 @@
-#include "sample_filter/radius_outlier_removal.h"
+
 #include <pcl/kdtree/kdtree_flann.h>
 
-namespace SampleFilter
+#include "sample/radius_outlier_removal/radius_outlier_removal.h"
+
+namespace Sample
 {
-int ROR::sample_filter()
+int ROR::sample()
 {
   std::vector<int> pt_ind;   // save index of element from kd-tree
   std::vector<float> pt_dis; // save distance
@@ -23,4 +25,4 @@ int ROR::sample_filter()
 }
 void ROR::setRadiusSearch(double ri) { r = ri; }
 void ROR::setMinNeighborsInRadius(int num) { num_threshold = num; }
-} // namespace SampleFilter
+} // namespace Sample

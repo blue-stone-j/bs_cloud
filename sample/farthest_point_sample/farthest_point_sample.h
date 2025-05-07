@@ -3,9 +3,9 @@
 
 #include <cmath>
 
-#include "interface.h"
+#include "sample/common/interface.h"
 
-namespace SampleFilter
+namespace Sample
 {
 /*
 todo: divide cloud into batchhes
@@ -35,9 +35,9 @@ class FarthestPointFilter : public Interface
   FarthestPointFilterParams params;
   FarthestPointFilter() {}
   FarthestPointFilter(FarthestPointFilterParams params);
-  int sample_filter();
+  int sample();
 };
 
-} // namespace SampleFilter
+} // namespace Sample
 
 #endif

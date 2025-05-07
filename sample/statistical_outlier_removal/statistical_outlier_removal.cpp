@@ -1,8 +1,8 @@
-#include "sample_filter/statistical_outlier_removal.h"
+#include "sample/statistical_outlier_removal/statistical_outlier_removal.h"
 
-namespace SampleFilter
+namespace Sample
 {
-int SOR::sample_filter()
+int SOR::sample()
 {
   pcl::PointCloud<pcl::PointXYZ>().swap(*cloud_filtered);
   std::vector<double> distances(cloud->size());
@@ -49,4 +49,4 @@ int SOR::sample_filter()
 
   return 0;
 }
-} // namespace SampleFilter
+} // namespace Sample

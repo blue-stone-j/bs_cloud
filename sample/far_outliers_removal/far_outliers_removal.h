@@ -1,9 +1,9 @@
 #ifndef FAR_OUTLIERS_REMOVAL_H
 #define FAR_OUTLIERS_REMOVAL_H
 
-#include "interface.h"
+#include "sample/common/interface.h"
 
-namespace SampleFilter
+namespace Sample
 {
 struct FarOutliersRemovalParams
 {
@@ -16,11 +16,11 @@ class FarOutliersRemoval : public Interface
  public:
   FarOutliersRemoval();
   FarOutliersRemoval(FarOutliersRemovalParams params);
-  int sample_filter();
+  int sample();
 
  private:
   FarOutliersRemovalParams params_;
 };
-} // namespace SampleFilter
+} // namespace Sample
 
 #endif

@@ -1,9 +1,9 @@
 #ifndef GRID_SAMPLE_H
 #define GRID_SAMPLE_H
 
-#include "interface.h"
+#include "sample/common/interface.h"
 
-namespace SampleFilter
+namespace Sample
 {
 struct GridSampleParams
 {
@@ -17,9 +17,9 @@ class GridSample : public Interface
   GridSampleParams params;
   GridSample() {}
   GridSample(GridSampleParams params);
-  int sample_filter();
+  int sample();
 };
 
-} // namespace SampleFilter
+} // namespace Sample
 
 #endif

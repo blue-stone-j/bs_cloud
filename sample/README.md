@@ -6,7 +6,7 @@ Cloud files are stored in folder `assets`. You can get more clouds as example fr
 
 ### interface
 
-This is base class for all sample_filter class.
+This is base class for all sample class.
 
 ### far_outliers_removal(skip)
 

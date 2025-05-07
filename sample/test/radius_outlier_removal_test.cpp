@@ -2,11 +2,11 @@
 
 #include <pcl/filters/radius_outlier_removal.h>
 
-#include "sample_filter/radius_outlier_removal.h"
+#include "sample/radius_outlier_removal/radius_outlier_removal.h"
 
 TEST(radius_outlier_removal_test, Cloud)
 {
-  SampleFilter::ROR ror;
+  Sample::ROR ror;
   ror.setCloudPath("../assets/cloud/fog.pcd");
 
   // pcl
@@ -20,7 +20,7 @@ TEST(radius_outlier_removal_test, Cloud)
   std::cout << "pcl: " << ror.cloud->size() << ", " << cloud_filtered.size() << std::endl;
 
   // customized
-  ror.sample_filter();
+  ror.sample();
   ror.saveCloud("../result/filtered_point_cloud1.pcd");
   std::cout << "nne: " << ror.cloud->size() << ", " << ror.cloud_filtered->size() << std::endl;
 }

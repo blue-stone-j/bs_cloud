@@ -4,7 +4,7 @@
 #include <unordered_map>
 
 
-#include "sample_filter/grid_sample.h"
+#include "sample/grid_sample/grid_sample.h"
 
 TEST(grid_sample_test, Cloud)
 {
@@ -74,7 +74,7 @@ int main(int argc, char **argv)
   // 保存过滤后的点云
   pcl::io::savePCDFileBinary("../result/filtered_point_cloud.pcd", *cloud_filtered);
 
-  SampleFilter::GridSample grid;
+  Sample::GridSample grid;
 
 
   return RUN_ALL_TESTS();
