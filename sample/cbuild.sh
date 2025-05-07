@@ -41,7 +41,7 @@ if [ ! $? -eq 0 ]; then
   exit
 fi
 
-make install -j8
+cmake --build . --target install --parallel 16
 
 if [ ! $? -eq 0 ]; then
   echo -e "${RED}Failed to build.${NC}"
