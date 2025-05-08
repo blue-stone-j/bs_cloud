@@ -36,7 +36,7 @@ TEST(Test, test1)
 
 
   // customized
-  PlaneFit plane_fit;
+  bcloud::fit::PlaneFit plane_fit;
   plane_fit.cloud = *cloud;
 
   plane_fit.fit();

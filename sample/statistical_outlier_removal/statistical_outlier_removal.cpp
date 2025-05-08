@@ -1,6 +1,8 @@
 #include "sample/statistical_outlier_removal/statistical_outlier_removal.h"
 
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 int SOR::sample()
 {
@@ -49,4 +51,5 @@ int SOR::sample()
 
   return 0;
 }
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud

@@ -3,7 +3,9 @@
 
 #include "sample/common/interface.h"
 
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 struct GridSampleParams
 {
@@ -20,6 +22,8 @@ class GridSample : public Interface
   int sample();
 };
 
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud
+
 
 #endif

@@ -1,5 +1,9 @@
 #include "segment/euclidean_cluster/euclidean_cluster.h"
 
+namespace bcloud
+{
+namespace segment
+{
 EuclideanCluster::EuclideanCluster( )
 {
 }
@@ -104,3 +108,6 @@ void EuclideanCluster::computeEuclideanCluster(const pcl::PointCloud<pcl::PointX
     }
   }
 }
+} // namespace segment
+
+} // namespace bcloud

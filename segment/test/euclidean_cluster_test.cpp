@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 
 
   // customized
-  EuclideanCluster euc(30, 20000, 0.4);
+  bcloud::segment::EuclideanCluster euc(30, 20000, 0.4);
   cluster_indices.clear( );
   euc.computeEuclideanCluster(*cloud, cluster_indices);
 

@@ -1,6 +1,8 @@
 #include "sample/grid_sample/grid_sample.h"
 
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 GridSample::GridSample(GridSampleParams params) :
   params(params) {}
@@ -9,4 +11,5 @@ int GridSample::sample()
 {
   return 0;
 }
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud

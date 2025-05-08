@@ -9,7 +9,10 @@
 
 #include "segment/common/point_type.h"
 
-
+namespace bcloud
+{
+namespace segment
+{
 // every ring can be labeled by three labels
 enum Label
 {
@@ -50,6 +53,10 @@ class GroundFilter
                     pcl::PointCloud<PointXYZIR> &out_groundless_points,
                     pcl::PointCloud<PointXYZIR> &out_ground_points);
 };
+} // namespace segment
+
+} // namespace bcloud
+
 
 
 #endif

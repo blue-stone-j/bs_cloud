@@ -1,5 +1,9 @@
 #include "segment/ring_ground_filter/ring_ground_filter.h"
 
+namespace bcloud
+{
+namespace segment
+{
 GroundFilter::GroundFilter( )
 {
   point_topic_ = "/points_raw";
@@ -262,3 +266,6 @@ void GroundFilter::estimateGround(const pcl::PointCloud<PointXYZIR>::ConstPtr &i
     vertical_points = *in_cloud_msg;
   }
 }
+} // namespace segment
+
+} // namespace bcloud

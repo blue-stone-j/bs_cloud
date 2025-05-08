@@ -8,7 +8,9 @@
 #include <pcl/io/pcd_io.h>
 #include <pcl/filters/extract_indices.h>
 
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 class Interface
 {
@@ -38,6 +40,7 @@ class Interface
     return 0;
   }
 };
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud
 
 #endif

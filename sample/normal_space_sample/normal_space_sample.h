@@ -3,7 +3,9 @@
 
 #include "sample/common/interface.h"
 
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 struct NormalSpaceSampleParams
 {
@@ -13,6 +15,8 @@ struct NormalSpaceSampleParams
 
 class NormalSpaceSample : public Interface
 {};
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud
+
 
 #endif

@@ -48,7 +48,7 @@ TEST(Test, test1)
   std::cout << "Cylinder coefficients: " << *coefficients_cylinder << std::endl;
 
   // customized
-  CylinderFit cylinder_fit;
+  bcloud::fit::CylinderFit cylinder_fit;
   cylinder_fit.cloud = *cloud;
 
   cylinder_fit.fit();

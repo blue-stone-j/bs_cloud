@@ -1,6 +1,8 @@
 #include "sample/farthest_point_sample/farthest_point_sample.h"
 
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 FarthestPointFilter::FarthestPointFilter(FarthestPointFilterParams params) :
   params(params) {}
@@ -80,4 +82,5 @@ pcl::PointCloud<pcl::PointXYZ> GetFPS(pcl::PointCloud<pcl::PointXYZ> &input, con
   }
   return output;
 }
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud

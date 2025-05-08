@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     return (-1);
   }
 
-  RayGroundFilter app;
+  bcloud::segment::RayGroundFilter app;
 
   app.estimateGround(cloud);
 

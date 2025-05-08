@@ -3,8 +3,9 @@
 
 #include "sample/common/interface.h"
 
-
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 class ROR : public Interface
 {
@@ -18,7 +19,9 @@ class ROR : public Interface
   int num_threshold = 5;
 };
 
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud
+
 
 
 #endif

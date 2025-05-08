@@ -2,6 +2,7 @@
 #define CYLINDER_FIT_H
 
 #include "fit/common/interface.h"
+
 namespace bcloud
 {
 namespace fit
@@ -11,7 +12,7 @@ namespace fit
    axis_direction.x, axis_direction.y, axis_direction.z
    radius
  */
-class CylinderFit : public FitInterface
+class CylinderRadiusFit : public FitInterface
 {
  public:
   int fit();
@@ -19,5 +20,6 @@ class CylinderFit : public FitInterface
 } // namespace fit
 
 } // namespace bcloud
+
 
 #endif

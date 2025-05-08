@@ -12,8 +12,8 @@ int main( )
     return (-1);
   }
   pcl::io::loadPCDFile(cloud_file, cloud);
-  GroundSegmentationParams params;
-  GroundSegmentation segmenter(params);
+  bcloud::segment::GroundSegmentationParams params;
+  bcloud::segment::GroundSegmentation segmenter(params);
   std::vector<int> labels;
 
   segmenter.estimateGround(cloud, &labels);

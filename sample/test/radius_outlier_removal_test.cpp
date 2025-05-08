@@ -6,7 +6,7 @@
 
 TEST(radius_outlier_removal_test, Cloud)
 {
-  Sample::ROR ror;
+  bcloud::sample::ROR ror;
   ror.setCloudPath("../assets/cloud/fog.pcd");
 
   // pcl

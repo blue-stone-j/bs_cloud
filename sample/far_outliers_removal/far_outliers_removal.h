@@ -3,7 +3,9 @@
 
 #include "sample/common/interface.h"
 
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 struct FarOutliersRemovalParams
 {
@@ -21,6 +23,7 @@ class FarOutliersRemoval : public Interface
  private:
   FarOutliersRemovalParams params_;
 };
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud
 
 #endif

@@ -22,7 +22,7 @@ include_directories(
 )
 
 function(get_functions module_directory function_names function_files)
-    
+
     set(function_names_local "")
     set(function_files_local "")
     file(GLOB children RELATIVE "${module_directory}" "${module_directory}/*")
@@ -32,15 +32,16 @@ function(get_functions module_directory function_names function_files)
             list(APPEND function_names_local "${child}")
             file(GLOB_RECURSE tmp_cpp_files "${module_directory}/${child}/*.cpp")
             list(APPEND function_files_local ${tmp_cpp_files})
-
         endif()
     endforeach()
 
     set(function_names ${function_names_local} PARENT_SCOPE)
     set(function_files ${function_files_local} PARENT_SCOPE)
+
 endfunction()
 
 function(compile_module module_name module_include module_lib)
+
     set(function_names "")
     set(function_files "")
     get_functions(${CMAKE_CURRENT_SOURCE_DIR} function_names function_files)
@@ -60,6 +61,7 @@ function(compile_module module_name module_include module_lib)
             add_test(NAME ${function_name}Test COMMAND ${module_name}_${function_name}_test)
         endforeach()
     endif()
+
 endfunction()
 
 file(GLOB sub_elements RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/*")

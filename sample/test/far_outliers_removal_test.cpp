@@ -4,8 +4,8 @@
 
 TEST(far_outliers_removal_test, Cloud)
 {
-  Sample::FarOutliersRemovalParams params;
-  Sample::FarOutliersRemoval far_outliers_removal(params);
+  bcloud::sample::FarOutliersRemovalParams params;
+  bcloud::sample::FarOutliersRemoval far_outliers_removal(params);
 
   far_outliers_removal.setCloudPath("../assets/cloud/fog.pcd");
   far_outliers_removal.sample();

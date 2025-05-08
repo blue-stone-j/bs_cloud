@@ -3,7 +3,9 @@
 
 #include "sample/common/interface.h"
 
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 struct PoissonDiskSampleParams
 {
@@ -13,6 +15,8 @@ struct PoissonDiskSampleParams
 
 class PoissonDiskSample : public Interface
 {};
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud
+
 
 #endif

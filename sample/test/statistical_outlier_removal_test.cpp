@@ -6,7 +6,7 @@
 
 TEST(statistical_outlier_removal_test, Cloud1)
 {
-  Sample::SOR sor;
+  bcloud::sample::SOR sor;
   sor.setCloudPath("../assets/cloud/fog.pcd");
 
   // pcl

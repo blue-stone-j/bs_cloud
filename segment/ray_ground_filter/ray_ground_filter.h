@@ -15,7 +15,10 @@
 #include <pcl/point_cloud.h>
 
 
-
+namespace bcloud
+{
+namespace segment
+{
 class RayGroundFilter
 {
  private:
@@ -117,5 +120,9 @@ class RayGroundFilter
   RayGroundFilter( );
   void estimateGround(const pcl::PointCloud<pcl::PointXYZI>::Ptr &in_sensor_cloud);
 };
+} // namespace segment
+
+} // namespace bcloud
+
 
 #endif // POINTS_PREPROCESSOR_RAY_GROUND_FILTER_RAY_GROUND_FILTER_H

@@ -5,7 +5,9 @@
 
 #include "sample/common/interface.h"
 
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 // StatisticalOutlierRemoval
 class SOR : public Interface
@@ -20,6 +22,8 @@ class SOR : public Interface
   int nn     = 30; // num of neighbors
   double mul = 0.5;
 };
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud
+
 
 #endif

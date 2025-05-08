@@ -74,7 +74,7 @@ int main(int argc, char **argv)
   // 保存过滤后的点云
   pcl::io::savePCDFileBinary("../result/filtered_point_cloud.pcd", *cloud_filtered);
 
-  Sample::GridSample grid;
+  bcloud::sample::GridSample grid;
 
 
   return RUN_ALL_TESTS();

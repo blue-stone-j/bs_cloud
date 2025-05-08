@@ -1,8 +1,12 @@
-#include "plane.h"
+#include "fit/plane/plane.h"
 
 #include <Eigen/Dense>
 #include <Eigen/Eigenvalues>
 
+namespace bcloud
+{
+namespace fit
+{
 int PlaneFit::fit()
 {
   { // PCA(Principal components analysis)
@@ -65,3 +69,6 @@ int PlaneFit::fit()
 
   return 0;
 }
+} // namespace fit
+
+} // namespace bcloud

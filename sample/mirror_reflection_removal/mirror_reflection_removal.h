@@ -3,7 +3,9 @@
 
 #include "sample/common/interface.h"
 
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 struct MirrorReflectionRemovalParams
 {
@@ -13,7 +15,8 @@ struct MirrorReflectionRemovalParams
 
 class MirrorReflectionRemoval : public Interface
 {};
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud
 
 
 #endif

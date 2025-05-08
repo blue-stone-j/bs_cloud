@@ -3,6 +3,10 @@
 
 #include "segment/line_fit_ground_segmentation/line_fit_ground_segmentation.h"
 
+namespace bcloud
+{
+namespace segment
+{
 /************* Bin *************/
 
 Bin::Bin( ) :
@@ -560,3 +564,6 @@ void GroundSegmentation::insertionThread(const PointCloud &cloud, const size_t s
     segment_coordinates_[i] = Bin::MinZPoint(range, point.z);
   } // endfor: 完成对起始索引至终止索引的遍历
 }
+} // namespace segment
+
+} // namespace bcloud

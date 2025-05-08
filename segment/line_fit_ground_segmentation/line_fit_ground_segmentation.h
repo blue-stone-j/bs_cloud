@@ -8,7 +8,10 @@
 
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
-
+namespace bcloud
+{
+namespace segment
+{
 // 每个bin中的点被压缩为一个点，根据论文，取高度最小的点; 每个点包含高度和距离两个值
 class Bin
 {
@@ -205,6 +208,9 @@ class GroundSegmentation
 
   void estimateGround(const PointCloud &cloud, std::vector<int> *segmentation);
 };
+} // namespace segment
+
+} // namespace bcloud
 
 
 #endif

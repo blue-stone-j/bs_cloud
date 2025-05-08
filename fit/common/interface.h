@@ -4,6 +4,8 @@
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 
+namespace bcloud
+{
 class FitInterface
 {
  public:
@@ -11,5 +13,6 @@ class FitInterface
   virtual int fit() = 0;
   std::vector<float> model_coefficients;
 };
+} // namespace bcloud
 
 #endif

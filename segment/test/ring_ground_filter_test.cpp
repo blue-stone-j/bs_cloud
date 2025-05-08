@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     return (-1);
   }
 
-  GroundFilter node;
+  bcloud::segment::GroundFilter node;
   pcl::PointCloud<PointXYZIR> ground_points;
   node.estimateGround(cloud, ground_points);
 

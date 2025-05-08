@@ -7,6 +7,10 @@
 #include <pcl/segmentation/extract_clusters.h>
 #include <pcl/kdtree/kdtree_flann.h>
 
+namespace bcloud
+{
+namespace segment
+{
 class EuclideanCluster
 {
  public:
@@ -26,5 +30,9 @@ class EuclideanCluster
   pcl::PointIndices indices;
   size_t size_pc;
 };
+} // namespace segment
+
+} // namespace bcloud
+
 
 #endif

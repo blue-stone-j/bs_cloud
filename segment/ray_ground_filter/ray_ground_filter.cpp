@@ -4,7 +4,10 @@
 #include "segment/ray_ground_filter/ray_ground_filter.h"
 
 
-
+namespace bcloud
+{
+namespace segment
+{
 bool RayGroundFilter::TransformPointCloud(const std::string &in_target_frame,
                                           const pcl::PointCloud<pcl::PointXYZI>::Ptr &in_cloud_ptr,
                                           const pcl::PointCloud<pcl::PointXYZI>::Ptr &out_cloud_ptr)
@@ -305,3 +308,6 @@ void RayGroundFilter::Run( )
 
   ground_topic = "/points_ground";
 }
+} // namespace segment
+
+} // namespace bcloud

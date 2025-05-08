@@ -5,7 +5,9 @@
 
 #include "sample/common/interface.h"
 
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 /*
 todo: divide cloud into batchhes
@@ -38,6 +40,8 @@ class FarthestPointFilter : public Interface
   int sample();
 };
 
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud
+
 
 #endif

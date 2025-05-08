@@ -3,7 +3,9 @@
 
 #include "sample/radius_outlier_removal/radius_outlier_removal.h"
 
-namespace Sample
+namespace bcloud
+{
+namespace sample
 {
 int ROR::sample()
 {
@@ -25,4 +27,5 @@ int ROR::sample()
 }
 void ROR::setRadiusSearch(double ri) { r = ri; }
 void ROR::setMinNeighborsInRadius(int num) { num_threshold = num; }
-} // namespace Sample
+} // namespace sample
+} // namespace bcloud
