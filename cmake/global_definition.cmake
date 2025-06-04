@@ -13,7 +13,7 @@ else()
 endif()
 
 configure_file(
-  ${CMAKE_CURRENT_SOURCE_DIR}/common/global_definition.h.in
-  ${CMAKE_CURRENT_SOURCE_DIR}/common/global_definition.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/modules/common/global_definition.h.in
+  ${CMAKE_CURRENT_SOURCE_DIR}/modules/common/global_definition.h
 )
 
