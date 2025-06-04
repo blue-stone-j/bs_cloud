@@ -15,6 +15,7 @@ class CircleFit : public FitInterface
   CircleFit();
   // Fit a circle to the given points
   int fit();
+  Eigen::Vector2f fitCircleKnownRadius2D(const std::vector<Eigen::Vector2f> &points, float radius);
 };
 } // namespace fit
 

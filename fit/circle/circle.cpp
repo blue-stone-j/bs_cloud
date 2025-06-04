@@ -50,6 +50,62 @@ int CircleFit::fit()
   return 0;
 }
 
+Eigen::Vector2f CircleFit::fitCircleKnownRadius2D(const std::vector<Eigen::Vector2f> &points, float radius)
+{
+  // If there are no points, return trivial center (0,0)
+  if (points.empty())
+  {
+    return Eigen::Vector2f::Zero();
+  }
+
+  // Initialize center (cx, cy) to the centroid of the data
+  Eigen::Vector2f centroid(0.0f, 0.0f);
+  for (const auto &p : points)
+  {
+    centroid += p;
+  }
+  centroid /= static_cast<float>(points.size());
+
+  Eigen::Vector2f center = centroid;
+
+  // Simple parameters for iterative updates
+  float learningRate = 0.01f;
+  int maxIters       = 100;
+  float epsilon      = 1e-6f;
+
+  for (int iter = 0; iter < maxIters; ++iter)
+  {
+    Eigen::Vector2f grad(0.0f, 0.0f);
+
+    // Compute gradient of the objective: sum( (|p - c| - R)^2 )
+    // d/d(cx, cy) = 2 * sum( (|p - c| - R) * ( (|p - c| - R)' ) )
+    // but more directly: partial derivative w.r.t c = 2 * (|p - c| - R) * (c - p)/|c - p|
+    // We accumulate these for all points.
+    for (const auto &p : points)
+    {
+      Eigen::Vector2f diff = center - p;
+      float dist           = diff.norm();
+      if (dist < 1e-9f)
+      {
+        continue; // Avoid singularities
+      }
+      float residual = (dist - radius);
+      grad += (residual * diff / dist);
+    }
+
+    // Update center
+    grad *= (2.0f); // factor 2 from the derivative of squared residual
+    Eigen::Vector2f update = learningRate * grad;
+    if (update.norm() < epsilon)
+    {
+      break; // Converged
+    }
+    center -= update;
+  }
+
+  return center;
+}
+
 } // namespace fit
 
 } // namespace bcloud
