@@ -16,19 +16,19 @@ class EuclideanCluster
  public:
   EuclideanCluster( );
   ~EuclideanCluster( );
-  EuclideanCluster(int minNum, int maxNum, double clusterTolerance); // size limit of cluster, distance tolerance
+  EuclideanCluster(int minNum, int maxNum, double cluster_tolerance); // size limit of cluster, distance tolerance
   // get index of points and size of this cloud
   void computeEuclideanCluster(const pcl::PointCloud<pcl::PointXYZ> &cloud_in, std::vector<pcl::PointIndices> &cluster_indices);
 
  public:
-  int minNum             = 30;
-  int maxNum             = 20000;
-  float clusterTolerance = 0.4;
+  int minNum              = 30;
+  int maxNum              = 20000;
+  float cluster_tolerance = 0.4;
 
  private:
   bool initCompute(const pcl::PointCloud<pcl::PointXYZ> &cloud_in);
   pcl::PointIndices indices;
-  size_t size_pc;
+  std::size_t size_pc;
 };
 } // namespace segment
 

@@ -34,14 +34,12 @@ function(get_functions module_directory function_names function_files)
            NOT function STREQUAL "test" AND 
            NOT function STREQUAL "common" AND 
            NOT function STREQUAL "docs")
-            # message(STATUS "${module_directory}: ${function}")
             list(APPEND function_names_local "${function}")
             file(GLOB_RECURSE temp_cpp_files "${module_directory}/${function}/*.cpp")
-            # message(STATUS "${module_directory}/${function} : ${temp_cpp_files}")
             list(APPEND function_files_local ${temp_cpp_files})
         endif()
     endforeach()
-    # message(STATUS "${module_directory} : ${function_files_local}")
+    # PARENT_SCOPE: sets a variable in the parent scope (i.e., the scope of the caller of the current function or macro), not the current one.
     set(function_names ${function_names_local} PARENT_SCOPE)
     set(function_files ${function_files_local} PARENT_SCOPE)
 
@@ -61,7 +59,6 @@ function(compile_module module_name module_include module_lib)
 
     if(BUILD_TEST)
         foreach(function_name ${function_names})
-            # message(WARNING "Compiling test for function: ${function_name} in module: ${module_name}")
             message(STATUS "${modules_directory}/${module_name}/${function_name}")
             file(GLOB_RECURSE function_cpp_files "${modules_directory}/${module_name}/${function_name}/*.cpp")
             add_executable(${module_name}_${function_name}_test

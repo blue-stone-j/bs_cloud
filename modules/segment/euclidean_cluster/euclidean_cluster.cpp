@@ -7,8 +7,8 @@ namespace segment
 EuclideanCluster::EuclideanCluster( )
 {
 }
-EuclideanCluster::EuclideanCluster(int minNumIn, int maxNumIn, double clusterToleranceIn) :
-  minNum(minNumIn), maxNum(maxNumIn), clusterTolerance(clusterToleranceIn)
+EuclideanCluster::EuclideanCluster(int minNumIn, int maxNumIn, double cluster_tolerance_in) :
+  minNum(minNumIn), maxNum(maxNumIn), cluster_tolerance(cluster_tolerance_in)
 {
 }
 EuclideanCluster::~EuclideanCluster( )
@@ -72,7 +72,7 @@ void EuclideanCluster::computeEuclideanCluster(const pcl::PointCloud<pcl::PointX
     //  search neighbor for every point in this cluster; add neighbor into this cluster;
     while (sq_idx < static_cast<int>(seed_queue.size( )))
     {
-      int ret = tree.radiusSearch(cloud_in.points[seed_queue[sq_idx]], clusterTolerance, nn_indices, nn_distance);
+      int ret = tree.radiusSearch(cloud_in.points[seed_queue[sq_idx]], cluster_tolerance, nn_indices, nn_distance);
       if (!ret) // if not neighbor
       {
         sq_idx++;
