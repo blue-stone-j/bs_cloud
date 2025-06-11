@@ -5,6 +5,7 @@
 #include <pcl/point_types.h>
 #include <pcl/point_cloud.h>
 
+
 #include <eigen3/Eigen/Dense>
 
 #include "segment/common/point_type.h"
@@ -13,6 +14,15 @@ namespace bcloud
 {
 namespace segment
 {
+struct PointXYZIR
+{
+  PCL_ADD_POINT4D
+  float intensity;
+  double timestamp;
+  std::uint16_t ring;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+} EIGEN_ALIGN16;
+
 // every ring can be labeled by three labels
 enum Label
 {
@@ -58,5 +68,10 @@ class GroundFilter
 } // namespace bcloud
 
 
+
+POINT_CLOUD_REGISTER_POINT_STRUCT(
+    bcloud::segment::PointXYZIR,
+    (float, x, x)(float, y, y)(float, z, z)(float, intensity, intensity)(
+        double, timestamp, timestamp)(std::uint16_t, ring, ring))
 
 #endif
