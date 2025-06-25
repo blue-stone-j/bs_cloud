@@ -1,15 +1,17 @@
+#include <gtest/gtest.h>
+
 #include <pcl/io/pcd_io.h>
 
 #include "segment/euclidean_cluster/euclidean_cluster.h"
 
-int main(int argc, char **argv)
+TEST(euclidean_cluster_test, test1)
 {
   // 加载点云
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
   if (pcl::io::loadPCDFile<pcl::PointXYZ>("../assets/cloud/fog.pcd", *cloud) == -1)
   {
     PCL_ERROR("Couldn't read file point_cloud_file \n");
-    return (-1);
+    ASSERT_TRUE(false);
   }
 
   // pcl
@@ -48,6 +50,11 @@ int main(int argc, char **argv)
   {
     std::cout << it->indices.size( ) << std::endl;
   }
+}
 
-  return 0;
+int main(int argc, char **argv)
+{
+  ::testing::InitGoogleTest(&argc, argv);
+
+  return RUN_ALL_TESTS( );
 }

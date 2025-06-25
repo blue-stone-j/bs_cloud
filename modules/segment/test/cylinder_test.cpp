@@ -1,4 +1,6 @@
 
+#include <gtest/gtest.h>
+
 #include <pcl/io/pcd_io.h>
 #include <pcl/filters/passthrough.h>
 #include <pcl/features/normal_3d.h>
@@ -10,14 +12,14 @@
 
 #include "segment/cylinder/cylinder.h"
 
-int main(int argc, char **argv)
+TEST(cylinder_test, cloud)
 {
   // 加载点云
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
   if (pcl::io::loadPCDFile<pcl::PointXYZ>("../assets/cloud/cylinder.pcd", *cloud) == -1)
   {
     PCL_ERROR("Couldn't read file point_cloud_file \n");
-    return (-1);
+    ASSERT_TRUE(false);
   }
 
   //--------------------------------直通滤波-----------------------------------
@@ -97,5 +99,11 @@ int main(int argc, char **argv)
   {
     std::cout << "PointCloud representing the cylindrical component: " << cloud_cylinder->points.size( ) << " data points." << std::endl;
   }
-  return 0;
+}
+
+int main(int argc, char **argv)
+{
+  ::testing::InitGoogleTest(&argc, argv);
+
+  return RUN_ALL_TESTS( );
 }

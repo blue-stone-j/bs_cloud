@@ -8,7 +8,7 @@
 
 #include "fit/plane/plane.h"
 
-TEST(Test, test1)
+TEST(plane_test, pcl)
 {
   std::string path = "../assets/cloud/plane1.pcd";
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
@@ -45,7 +45,7 @@ TEST(Test, test1)
   plane_fit.fit();
 }
 
-TEST(Test, test2)
+TEST(plane_test, custom)
 {
   std::string path = "../assets/cloud/plane1.pcd";
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);

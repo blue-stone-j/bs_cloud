@@ -5,7 +5,7 @@
 
 #include "fit/circle/circle.h"
 
-TEST(Test, test1)
+TEST(circle_test, test1)
 {
   std::string path = "../assets/cloud/plane1.pcd";
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);

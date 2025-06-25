@@ -8,7 +8,7 @@
 
 #include "fit/cylinder/cylinder.h"
 
-TEST(Test, test1)
+TEST(cylinder_test, test1)
 {
   std::string path = "../assets/cloud/cylinder1.pcd";
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);

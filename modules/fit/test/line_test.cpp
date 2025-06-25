@@ -6,7 +6,7 @@
 #include <pcl/visualization/pcl_visualizer.h>
 #include <pcl/filters/extract_indices.h>
 
-TEST(Test, test1)
+TEST(line_test, one_line_fit)
 {
   //-------------------------- 加载点云 --------------------------
   std::string path = "../assets/cloud/line1.pcd";
@@ -38,7 +38,7 @@ TEST(Test, test1)
             << " = (z - " << coefficients[2] << ") / " << coefficients[5] << std::endl;
 }
 
-TEST(Test, test2)
+TEST(line_test, multiple_line_fit)
 {
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
   // RANSAC拟合多条直线

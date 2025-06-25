@@ -4,7 +4,7 @@
 
 #include "segment/kmeans_cluster/kmeans_cluster.h"
 
-TEST(Test, test1)
+TEST(kmeans_cluster_test, test1)
 {
   std::string path = "../assets/cloud/plane1.pcd";
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
