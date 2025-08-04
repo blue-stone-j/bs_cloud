@@ -1,6 +1,6 @@
 set(SOFTWARE_VERSION ${BMATH_VERSION})
 
-string(TIMESTAMP RELEASE_DATE "%d.%m.%y")
+string(TIMESTAMP RELEASE_DATE "%d.%m.%Y")
 
 if(_WIN_)
   set(SYSTEM_VERSION Windows)
